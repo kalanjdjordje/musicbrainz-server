@@ -394,7 +394,7 @@ CREATE TABLE country_area ( -- replicate (verbose)
 
 CREATE TABLE deleted_entity (
     gid UUID NOT NULL, -- PK
-    data JDOC NOT NULL,
+    data TEXT,
     deleted_at timestamptz NOT NULL DEFAULT now()
 );
 
@@ -415,7 +415,7 @@ CREATE TABLE edit
 CREATE TABLE edit_data
 (
     edit                INTEGER NOT NULL, -- PK, references edit.id
-    data                JDOC NOT NULL
+    data                TEXT
 );
 
 CREATE TABLE edit_note
